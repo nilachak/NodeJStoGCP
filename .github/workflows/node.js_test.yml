@@ -26,8 +26,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: sudo apt install nodejs
     - run: sudo apt install npm
-    - run: sudo systemctl start npm.service
-    - run: sudo systemctl enable npm.service  
+    - run: sudo systemctl start npm
+    - run: sudo systemctl enable npm  
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
