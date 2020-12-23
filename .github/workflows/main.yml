@@ -1,0 +1,36 @@
+  
+name: Deploy to GCP
+on:
+  push:
+    branches:
+      - main
+env:
+  GCP_PROJECT_ID_PREFIX: 'ingka-icf-digfammem' #without -branch (e.g. -dev)
+  CI: true
+jobs:
+  deploy:
+    name: "DEPLOY for: '${{github.ref}}'"
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v1
+      - name: Use Node.js (10.x)
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+          registry-url: 'https://registry.npmjs.org'
+      - name: Setting GCP Reference
+        run: echo "GCP_REF=$(echo ${GITHUB_REF##*/} | sed 's/master/prod/')" >> $GITHUB_ENV
+      - name: Setting GCP Project ID
+        run: echo "GCP_PROJECT_ID=${{ env.GCP_PROJECT_ID_PREFIX }}-${{ env.GCP_REF }}" >> $GITHUB_ENV
+      - run: npm ci
+      - run: npm test
+      #- run: npm run lint
+      - run: source app-env-${{ env.GCP_REF }}.sh && npm run build
+      - name: Running deploy for ${{ env.GCP_PROJECT_ID }}
+        uses: actions-hub/gcloud@master
+        env:
+          PROJECT_ID: ${{ env.GCP_PROJECT_ID }}
+          APPLICATION_CREDENTIALS: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+        with:
+          args: app deploy app.yaml --project=${{ env.GCP_PROJECT_ID }}
