@@ -27,7 +27,7 @@ jobs:
       - run: npm test
       #- run: npm run lint
       #- run: source app-env-${{ env.GCP_REF }}.sh && 
-      - run: npm run build
+      #- run: npm run build
       - name: Running deploy for concrete-tuner-295114
         uses: actions-hub/gcloud@master
         env:
