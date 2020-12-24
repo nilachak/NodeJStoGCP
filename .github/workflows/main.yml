@@ -17,7 +17,7 @@ jobs:
       - name: Use Node.js (10.x)
         uses: actions/setup-node@v1
         with:
-          node-version: '10.x'
+          node-version: '12.x'
           registry-url: 'https://registry.npmjs.org'
       - name: Setting GCP Reference
         run: echo "GCP_REF=$(echo ${GITHUB_REF##*/} | sed 's/master/prod/')" >> $GITHUB_ENV
@@ -26,11 +26,13 @@ jobs:
       - run: sudo apt install npm
       - run: npm test
       #- run: npm run lint
-      #- run: source app-env-${{ env.GCP_REF }}.sh && npm run build
-      - name: Running deploy for ${{ env.GCP_PROJECT_ID }}
+      #- run: source app-env-${{ env.GCP_REF }}.sh && 
+      - run: npm run build
+      - name: Running deploy for concrete-tuner-295114
         uses: actions-hub/gcloud@master
         env:
-          PROJECT_ID: ${{ env.GCP_PROJECT_ID }}
-          APPLICATION_CREDENTIALS: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+          PROJECT_ID: concrete-tuner-295114
+#          APPLICATION_CREDENTIALS: ${{ secrets.GCP_SERVICE_ACCOUNT }}
         with:
-          args: app deploy app.yaml --project=${{ env.GCP_PROJECT_ID }}
+          args: app deploy app.yaml --project=concrete-tuner-295114
+
