@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "concrete-tuner-295114",
+  "private_key_id": "efd321dfc10a0f37b4078454975c309f4a5ef10d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC+Z+Nl+uT2mNzV\nb0rznY+qdU0sTPmB7CSmTR2YA3KrE9xrajvXc30jMzjEfHbI4dXYLqU24Z/DYHzy\nRH4nqTKVja/MY+ZTRbB5VLwZPwQF1vQPS+hs7fZsrBKHzM7r86x3fQ15yEnfoVt7\nj7WYMlOjNqMOXNXOr2CKWVMC6WTnGSJEH73P+XchaMwm4S1YwlkJ4r0NZkh5x1QG\nDL1IqAbOPVT8q6CrDCE7ljfq1W6g2n14LPJpgZkay2kOI8mM2HkVaeWizHbPuZKL\nqWNl6jDBXJgb6Y3nlk6nm7u15E0Fqy6k2AcpYgxUCdwhjVOwKeNaUR6XJKEsi2dZ\nidAx+Q3NAgMBAAECggEAGk4ziDYQtnH5hoJE9mHFBK2GjzGGQhkcGh6q0ULer3yD\nthJb+KDjv752oAy7A3dR6jdNi4bB4gX9VSI51KRnUOqdiE0f9863uheHEizW0zC2\nkLtxvcTlh++A8uKMjuQgJnTwLOxLKnp6L1i0I7YGQJUOk3AneNHZcluzYIJatqOQ\nuYQnGFTgEUHJYf27qoK7NKwibw+SdTucVhED7K4FeNE+mwRdkRtPQWwXWJMFr87S\n6CIRBZ+x5B/uUZfrzIW5uIth6whPoZjoMNeWTM2+/satP4kgwB/xxBbA5fHQyE3W\n1NjY16hKNbPuz5IyNCZN/EHa00blXYq+Zi4XGghPwQKBgQD0lMxL0N6mQo79ik+8\nP5rAQzsn6LJceUEeDVst7U5yEBFhH4y8L3kgoKvgQdcYRxq7PGHaAFAcgJISeE3v\nIt0V3tXBMkwx6ACaAGpQTxzcWoHKiKAhzy/bdP1nptKL8bs+/rH9DdJO+Kdlt56C\nn0cdfoxSFntT85zo5pRLzrK/jQKBgQDHS5fELOU2EtgB+kWifG9JV8aIVjevcdLI\nL34qR15pXjXr3nNLjnGNEFsZQwNKwYdNt7Kph2tOgbrFbQIKm9ByUzlyirDBJM62\nZ2pUbSR9cqzp4sEiJtB+qXJQKmPgccvlph2Cb0bwFnvfmZ+2W8MjNBDhwsuJltOX\nxxTksVPXQQKBgQC1MLK0i/UWCILz844kcJ5NRsFBTJMuDKogAFcHDCGsQJkPcZcK\nJsU+ValfBoe5tZtpEE+Rd9/hbaJJSpS5zwMoW5/Rc1idNDmV3S7ldeZ0nBxBFbxD\nr8DNfLrqGd0qzZchEQB87stZs74XjdNBA4xknkaH3Z3Z0MTyiTddfbBQVQKBgDjD\nNQSw7M/L6i4WBENVQbUYBPnL5KxZtPlDXaHZFfDY3m7BuwDoHztYTzoQth1SpaDj\nE0XpxgxkMrgMZipzWplVTuVqzxET1LRrHAPT2jLIuKsc5Hk/qN6KkH54tF22y6Yq\n+/isjP3QyZNUBANCe3/JUo2al7ImfTmbgD3qq8CBAoGBAIbtiowV3TDP3JYuDEob\n0U/j/h7LaIgWvxaLQHvOUD+Gia7g4F0j7cUyJt/U1cvYyjMmU0xqotC0oAhFSu3M\nMW6+4rdG8h9G4vXhOaDQVn5x34/hYVak/JxfT4Op8YfiZHL1po3C6cm7Sm+juyWg\nbrQNgx+FApMgbueN72JjgFh1\n-----END PRIVATE KEY-----\n",
+  "client_email": "nilasish-specific-sa@concrete-tuner-295114.iam.gserviceaccount.com",
+  "client_id": "104808743919092463092",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/nilasish-specific-sa%40concrete-tuner-295114.iam.gserviceaccount.com"
+}
