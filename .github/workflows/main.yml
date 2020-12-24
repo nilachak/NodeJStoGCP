@@ -26,7 +26,7 @@ jobs:
       - run: sudo apt install npm
       - run: npm test
       #- run: npm run lint
-      - run: source app-env-${{ env.GCP_REF }}.sh && npm run build
+      #- run: source app-env-${{ env.GCP_REF }}.sh && npm run build
       - name: Running deploy for ${{ env.GCP_PROJECT_ID }}
         uses: actions-hub/gcloud@master
         env:
