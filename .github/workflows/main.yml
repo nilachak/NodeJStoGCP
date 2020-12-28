@@ -24,7 +24,7 @@ jobs:
       - name: Setting GCP Project ID
         run: echo "GCP_PROJECT_ID=${{ env.GCP_PROJECT_ID_PREFIX }}-${{ env.GCP_REF }}" >> $GITHUB_ENV
       - run: sudo apt install npm
-      - run: npm test
+      #- run: npm test
       #- run: npm run lint
       #- run: source app-env-${{ env.GCP_REF }}.sh && 
       #- run: npm run build
