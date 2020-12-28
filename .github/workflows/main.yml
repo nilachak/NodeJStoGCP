@@ -29,7 +29,7 @@ jobs:
       #- run: source app-env-${{ env.GCP_REF }}.sh && 
       #- run: npm run build
       - name: Running deploy for poc-for-ikea-69842
-        uses: actions-hub/gcloud@master --yes
+        uses: actions-hub/gcloud@master
         env:
           PROJECT_ID: poc-for-ikea-69842
           APPLICATION_CREDENTIALS:  ${{ secrets.GCP_SERVICE_ACCOUNT }}
