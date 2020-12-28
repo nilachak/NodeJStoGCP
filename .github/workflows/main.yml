@@ -20,9 +20,9 @@ jobs:
           node-version: '12.x'
           registry-url: 'https://registry.npmjs.org'
       - name: Setting GCP Reference
-      #  run: echo "GCP_REF=$(echo ${GITHUB_REF##*/} | sed 's/master/prod/')" >> $GITHUB_ENV
+        run: echo "GCP_REF=$(echo ${GITHUB_REF##*/} | sed 's/master/prod/')" >> $GITHUB_ENV
       - name: Setting GCP Project ID
-       # run: echo "GCP_PROJECT_ID=${{ env.GCP_PROJECT_ID_PREFIX }}-${{ env.GCP_REF }}" >> $GITHUB_ENV
+        run: echo "GCP_PROJECT_ID=${{ env.GCP_PROJECT_ID_PREFIX }}-${{ env.GCP_REF }}" >> $GITHUB_ENV
       - run: sudo apt install npm
       - run: npm test
       #- run: npm run lint
