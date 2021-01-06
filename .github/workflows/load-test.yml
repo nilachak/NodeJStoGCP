@@ -25,5 +25,5 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run local k6 test
         uses: k6io/action@v0.1
-          with:
-           filename: test.js
+        with:
+              filename: test.js
