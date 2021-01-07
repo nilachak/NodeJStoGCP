@@ -27,3 +27,5 @@ jobs:
         uses: k6io/action@v0.1
         with:
               filename: test.js
+              cloud: true
+              token: ${{ secrets.K6_CLOUD_API_TOKEN }}
