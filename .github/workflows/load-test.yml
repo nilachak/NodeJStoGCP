@@ -34,5 +34,5 @@ jobs:
         with:
              status: ${{ job.status }}
              steps: ${{ toJson(steps) }}
-             slack_webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
+             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         if: always()
