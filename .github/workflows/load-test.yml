@@ -23,7 +23,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       #- uses: actions/checkout@v2
-
+      - name: Job starting
+        uses: act10ns/slack@v1
+        with:
+              status: starting
+              channel: '#nilasishtest'
+        if: always()
       # Runs a single command using the runners shell
       - name: Run local k6 test
         uses: k6io/action@v0.1
