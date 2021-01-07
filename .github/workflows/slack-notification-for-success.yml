@@ -1,0 +1,33 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  success-notification:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: exit 0
+      - name: Slack Success
+        if: always()
+        uses: nilachak/NodeJStoGCP/.github/workflows/load-test.yml
+        with:
+          job-status: ${{ job.status }}
+          slack-bot-token: ${{ secrets.SLACK_BOT_TOKEN }}
+          channel: '#nilasishtest'
+
+  failure-notification:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: exit 1
+      - name: Slack Failure
+        if: always()
+        uses: nilachak/NodeJStoGCP/.github/workflows/load-test.yml
+        with:
+          job-status: ${{ job.status }}
+          slack-bot-token: ${{ secrets.SLACK_BOT_TOKEN }}
+          channel: github-actions-test
