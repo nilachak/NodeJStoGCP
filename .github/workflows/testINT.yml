@@ -30,5 +30,6 @@ jobs:
         uses: Xotabu4/selenoid-github-action@v1
       - uses: actions/checkout@v1
       - run: npm install
+      - run: npm ci  
       - name: Run Tests
         run: npm test      
