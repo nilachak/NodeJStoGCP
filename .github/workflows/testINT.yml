@@ -32,4 +32,11 @@ jobs:
       - run: npm install
       - run: npm ci  
       - name: Run Tests
-        run: npm test      
+        run: npm test
+        hostname: 'localhost',
+        port: 4444,
+        path: "/wd/hub",
+        capabilities: [{
+        maxInstances: 5, // 5 parallel threads
+        browserName: 'chrome',
+        }]      
