@@ -29,7 +29,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Start Selenoid
-        id: Starting selenoid
+        id: Starting_elenoid
         uses: Xotabu4/selenoid-github-action@v1
       - name: Job starting
         uses: act10ns/slack@v1
@@ -39,11 +39,11 @@ jobs:
         if: always()
       - uses: actions/checkout@v1
       - name: NPM INSTALL
-        id: installing NPM
+        id: installing_NPM
         run: npm install
       - run: npm ci  
       - name: Run Tests
-        id: Running tests
+        id: Running_tests
         run: npm test
       - name: Test Completed
         uses: act10ns/slack@v1
