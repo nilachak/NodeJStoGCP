@@ -29,6 +29,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Start Selenoid
+        id: Starting selenoid
         uses: Xotabu4/selenoid-github-action@v1
       - name: Job starting
         uses: act10ns/slack@v1
@@ -37,9 +38,12 @@ jobs:
               channel: '#nilasishtest'
         if: always()
       - uses: actions/checkout@v1
-      - run: npm install
+      - name: NPM INSTALL
+        id: installing NPM
+        run: npm install
       - run: npm ci  
       - name: Run Tests
+        id: Running tests
         run: npm test
       - name: Test Completed
         uses: act10ns/slack@v1
