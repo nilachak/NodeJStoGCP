@@ -48,6 +48,6 @@ jobs:
       - name: Test Completed
         uses: act10ns/slack@v1
         with:
-              status: starting
+              status: Finished
               channel: '#nilasishtest'
         if: always()
