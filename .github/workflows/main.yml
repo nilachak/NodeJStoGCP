@@ -33,7 +33,9 @@ jobs:
         env:
           PROJECT_ID: poc-for-ikea-69842
           APPLICATION_CREDENTIALS:  ${{ secrets.GCP_SERVICE_ACCOUNT }}
+      
         with:
           args: app deploy app.yaml --project=poc-for-ikea-69842
+      - run: echo $APPLICATION_CREDENTIALS
 
 
